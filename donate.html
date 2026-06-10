@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate - Pedals of Hope</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo"><span>🚲</span> Pedals of Hope</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="stories.html">Stories</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="btn-nav active">Donate</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Make a Donation</h1>
+    <p>Every dollar brings a child closer to their first ride</p>
+  </section>
+
+  <!-- Impact Tiers -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Your Impact</h2>
+        <p>See exactly what your generosity provides</p>
+      </div>
+      <div class="tier-grid">
+        <div class="tier">
+          <h3>Helmet Hero</h3>
+          <div class="tier-amount">$50</div>
+          <p>Provides an adaptive helmet and safety gear so a child can ride safely from day one.</p>
+          <a href="#donate-form" class="btn btn-secondary">Give $50</a>
+        </div>
+        <div class="tier">
+          <h3>Modification Maker</h3>
+          <div class="tier-amount">$250</div>
+          <p>Funds custom pedal adaptations, hand grips, or steering modifications for one child's bike.</p>
+          <a href="#donate-form" class="btn btn-secondary">Give $250</a>
+        </div>
+        <div class="tier featured">
+          <h3>Bike Builder</h3>
+          <div class="tier-amount">$1,000</div>
+          <p>Covers a significant portion of an adaptive trike, enough to make a bike possible for a family in need.</p>
+          <a href="#donate-form" class="btn btn-primary">Give $1,000</a>
+        </div>
+        <div class="tier">
+          <h3>Freedom Funder</h3>
+          <div class="tier-amount">$3,500</div>
+          <p>Fully funds one complete adaptive bike package including equipment, fitting, helmet, and follow-up care.</p>
+          <a href="#donate-form" class="btn btn-secondary">Give $3,500</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donate Form -->
+  <section class="section section-alt" id="donate-form">
+    <div class="container">
+      <div class="form-card">
+        <h2 style="text-align:center; color:var(--primary-dark); margin-bottom:0.5rem;">Donate Now</h2>
+        <p style="text-align:center; color:var(--text-light); margin-bottom:2rem;">Secure, tax-deductible donation. You'll receive a receipt via email.</p>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label>Donation Amount</label>
+            <select>
+              <option>$50 - Helmet Hero</option>
+              <option>$250 - Modification Maker</option>
+              <option selected>$1,000 - Bike Builder</option>
+              <option>$3,500 - Freedom Funder</option>
+              <option>Other Amount</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Custom Amount (optional)</label>
+            <input type="number" placeholder="$" min="1">
+          </div>
+          <div class="form-group">
+            <label>Donation Type</label>
+            <select>
+              <option>One-Time</option>
+              <option>Monthly Recurring</option>
+              <option>Quarterly Recurring</option>
+              <option>Annual</option>
+            </select>
+          </div>
+          <hr style="margin:1.5rem 0; border:none; border-top:1px solid var(--border);">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Jane Doe">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="jane@example.com">
+          </div>
+          <div class="form-group">
+            <label>Dedicate This Gift (optional)</label>
+            <input type="text" placeholder="In honor of / In memory of...">
+          </div>
+          <div class="form-group">
+            <label>Message (optional)</label>
+            <textarea placeholder="Share why you're giving..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; text-align:center; font-size:1.1rem; padding:1rem;">Complete Donation</button>
+          <p style="text-align:center; margin-top:1rem; font-size:0.85rem; color:var(--text-light);">🔒 Secure payment processing. Your information is encrypted and protected.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Ways to Give -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Other Ways to Give</h2>
+        <p>Donations aren't the only way to make a difference</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">🏢</div>
+          <h3>Corporate Matching</h3>
+          <p>Many employers match charitable donations. Check with your HR department to double your impact at no extra cost.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎂</div>
+          <h3>Fundraise for Us</h3>
+          <p>Start a birthday fundraiser, run a race, or host an event. We'll provide materials and support to help you succeed.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📜</div>
+          <h3>Planned Giving</h3>
+          <p>Include Pedals of Hope in your estate plan or make a legacy gift. Contact us to discuss options with our development team.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚲</div>
+          <h3>Donate Equipment</h3>
+          <p>Have gently used adaptive equipment your child has outgrown? We refurbish and redistribute donated bikes to new riders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparency -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2 style="font-size:1.8rem; color:var(--primary-dark); margin-bottom:1rem;">Where Your Money Goes</h2>
+          <p style="margin-bottom:1rem;">We believe in radical transparency. Here's exactly how we use every dollar:</p>
+          <ul style="list-style:none; padding:0;">
+            <li style="margin-bottom:0.8rem; display:flex; align-items:center; gap:0.5rem;">
+              <strong style="color:var(--primary); min-width:45px;">72%</strong> Adaptive equipment & bikes
+            </li>
+            <li style="margin-bottom:0.8rem; display:flex; align-items:center; gap:0.5rem;">
+              <strong style="color:var(--primary); min-width:45px;">12%</strong> Professional fitting & follow-up
+            </li>
+            <li style="margin-bottom:0.8rem; display:flex; align-items:center; gap:0.5rem;">
+              <strong style="color:var(--primary); min-width:45px;">8%</strong> Clinical assessments & matching
+            </li>
+            <li style="margin-bottom:0.8rem; display:flex; align-items:center; gap:0.5rem;">
+              <strong style="color:var(--primary); min-width:45px;">5%</strong> Outreach & awareness
+            </li>
+            <li style="margin-bottom:0.8rem; display:flex; align-items:center; gap:0.5rem;">
+              <strong style="color:var(--primary); min-width:45px;">3%</strong> Administration
+            </li>
+          </ul>
+          <p style="margin-top:1rem;"><strong>92 cents of every dollar</strong> goes directly to getting bikes to children. We keep overhead minimal because every dollar matters.</p>
+        </div>
+        <div class="img-placeholder">📊</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>$3,500 Changes a Child's Life</h2>
+    <p>That's the average cost of one complete adaptive bike package. Can you help fund one?</p>
+    <a href="#donate-form" class="btn btn-primary">Donate Now</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h4>🚲 Pedals of Hope</h4>
+        <p>A 501(c)(3) non-profit dedicated to providing adaptive bikes and cycling equipment to children with disabilities, so every child can experience the freedom of riding.</p>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <a href="programs.html">Apply for a Bike</a>
+        <a href="programs.html#eligibility">Eligibility</a>
+        <a href="programs.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Volunteer</a>
+        <a href="contact.html">Partner With Us</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Pedals of Hope. All rights reserved. EIN: 00-0000000
+    </div>
+  </footer>
+
+</body>
+</html>
