@@ -32,14 +32,11 @@
   <!-- Mission -->
   <section class="section">
     <div class="container">
-      <div class="two-col">
-        <div>
-          <h2 style="font-size:1.8rem; color:var(--primary-dark); margin-bottom:1rem;">Our Mission</h2>
-          <p style="margin-bottom:1rem;">Pedals of Hope exists to ensure that every child, regardless of physical ability or financial circumstance, has access to the adaptive cycling equipment they need to ride a bike.</p>
-          <p style="margin-bottom:1rem;">We believe bike riding is more than recreation. It builds confidence, strengthens muscles, improves coordination, and most importantly, lets kids be kids alongside their friends and siblings.</p>
-          <p>Since our founding, we've provided over 250 adaptive bikes to children in 18 states, partnering with therapists, equipment manufacturers, and generous donors to make it happen.</p>
-        </div>
-        <div class="img-placeholder"></div>
+      <div style="max-width:700px; margin:0 auto; text-align:center;">
+        <h2 style="font-size:1.8rem; color:var(--primary-dark); margin-bottom:1rem;">Our Mission</h2>
+        <p style="margin-bottom:1rem;">Pedals of Hope exists to ensure that every child, regardless of physical ability or financial circumstance, has access to the adaptive cycling equipment they need to ride a bike.</p>
+        <p style="margin-bottom:1rem;">We believe bike riding is more than recreation. It builds confidence, strengthens muscles, improves coordination, and most importantly, lets kids be kids alongside their friends and siblings.</p>
+        <p>Since our founding, we've provided over 250 adaptive bikes to children in 18 states, partnering with therapists, equipment manufacturers, and generous donors to make it happen.</p>
       </div>
     </div>
   </section>
@@ -47,14 +44,11 @@
   <!-- Our Story -->
   <section class="section section-alt">
     <div class="container">
-      <div class="two-col reverse">
-        <div>
-          <h2 style="font-size:1.8rem; color:var(--primary-dark); margin-bottom:1rem;">Our Story</h2>
-          <p style="margin-bottom:1rem;">Pedals of Hope started in 2019 when our founder, <strong>Jane Doe</strong>, watched her daughter's best friend sit on the sidelines during a neighborhood bike ride. The friend had cerebral palsy and needed an adaptive trike that cost over $4,000. Insurance wouldn't cover it.</p>
-          <p style="margin-bottom:1rem;">Jane organized a community fundraiser, raised the money in three weeks, and watched that little girl ride for the first time. The look on her face changed everything.</p>
-          <p>"One bike turned into five. Five turned into fifty. We couldn't stop, because the need never stops." Today, Pedals of Hope operates nationwide, processing applications year-round.</p>
-        </div>
-        <div class="img-placeholder"></div>
+      <div style="max-width:700px; margin:0 auto; text-align:center;">
+        <h2 style="font-size:1.8rem; color:var(--primary-dark); margin-bottom:1rem;">Our Story</h2>
+        <p style="margin-bottom:1rem;">Pedals of Hope started in 2019 when our founder, <strong>Jane Doe</strong>, watched her daughter's best friend sit on the sidelines during a neighborhood bike ride. The friend had cerebral palsy and needed an adaptive trike that cost over $4,000. Insurance wouldn't cover it.</p>
+        <p style="margin-bottom:1rem;">Jane organized a community fundraiser, raised the money in three weeks, and watched that little girl ride for the first time. The look on her face changed everything.</p>
+        <p>"One bike turned into five. Five turned into fifty. We couldn't stop, because the need never stops." Today, Pedals of Hope operates nationwide, processing applications year-round.</p>
       </div>
     </div>
   </section>
@@ -237,5 +231,15 @@
     </div>
   </footer>
 
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section, .stats-bar, .cta-banner, .card, .testimonial, .tier, .step, .story-card, .impact-item, .event-item, .sponsor-tier, .team-member').forEach(el => {
+      el.classList.add('animate-on-scroll'); observer.observe(el);
+    });
+  </script>
 </body>
 </html>

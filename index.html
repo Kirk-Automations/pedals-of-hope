@@ -33,25 +33,12 @@
       <a href="programs.html" class="btn btn-primary">Apply for a Bike</a>
       <a href="donate.html" class="btn btn-outline">Make a Donation</a>
     </div>
-  </section>
-
-  <!-- Press Bar -->
-  <div class="press-bar">
-    <div class="press-grid">
-      <div class="press-item">
-        <span class="press-source">Michigan Daily</span>
-        <span class="press-quote">"Changing lives, one bike at a time"</span>
-      </div>
-      <div class="press-item">
-        <span class="press-source">Detroit Free Press</span>
-        <span class="press-quote">"A lifeline for families"</span>
-      </div>
-      <div class="press-item">
-        <span class="press-source">WXYZ Detroit</span>
-        <span class="press-quote">"Making the impossible ride possible"</span>
-      </div>
+    <div class="hero-press">
+      <span>Michigan Daily</span>
+      <span>Detroit Free Press</span>
+      <span>WXYZ Detroit</span>
     </div>
-  </div>
+  </section>
 
   <!-- Stats -->
   <div class="stats-bar">
@@ -78,14 +65,11 @@
   <!-- Mission Summary -->
   <section class="section">
     <div class="container">
-      <div class="two-col">
-        <div>
-          <h2 style="font-size:1.8rem; color:var(--primary-dark); margin-bottom:1rem;">Riding Changes Everything</h2>
-          <p style="margin-bottom:1rem;">For most kids, hopping on a bike is second nature. But for children with cerebral palsy, spina bifida, muscular dystrophy, and other conditions, standard bikes simply don't work.</p>
-          <p style="margin-bottom:1rem;">Adaptive bikes can cost between $1,000 and $7,000, far out of reach for many families. Insurance rarely covers them. That's where we come in.</p>
-          <p><strong>Pedals of Hope</strong> bridges the gap between what families need and what they can afford, so no child is left watching from the sidewalk.</p>
-        </div>
-        <div class="img-placeholder"></div>
+      <div style="max-width:700px; margin:0 auto; text-align:center;">
+        <h2 style="font-size:1.8rem; color:var(--primary-dark); margin-bottom:1rem;">Riding Changes Everything</h2>
+        <p style="margin-bottom:1rem;">For most kids, hopping on a bike is second nature. But for children with cerebral palsy, spina bifida, muscular dystrophy, and other conditions, standard bikes simply don't work.</p>
+        <p style="margin-bottom:1rem;">Adaptive bikes can cost between $1,000 and $7,000, far out of reach for many families. Insurance rarely covers them. That's where we come in.</p>
+        <p><strong>Pedals of Hope</strong> bridges the gap between what families need and what they can afford, so no child is left watching from the sidewalk.</p>
       </div>
     </div>
   </section>
@@ -134,18 +118,15 @@
   <!-- Testimonial -->
   <section class="section">
     <div class="container">
-      <div class="two-col reverse">
-        <div>
-          <div class="testimonial">
-            <blockquote>"When Maya got her adaptive trike, she rode to the end of the driveway and just kept going. I was running behind her crying. She was laughing so hard. That was the first time she'd ever kept up with her brother."</blockquote>
-            <cite>Sarah M., parent</cite>
-          </div>
-          <div class="testimonial" style="margin-top:1.5rem;">
-            <blockquote>"The process was so easy and everyone was incredibly kind. Within six weeks, our son had a bike that actually worked for him. It changed our whole family's weekends."</blockquote>
-            <cite>David & Lin T., parents</cite>
-          </div>
+      <div style="max-width:700px; margin:0 auto;">
+        <div class="testimonial">
+          <blockquote>"When Maya got her adaptive trike, she rode to the end of the driveway and just kept going. I was running behind her crying. She was laughing so hard. That was the first time she'd ever kept up with her brother."</blockquote>
+          <cite>Sarah M., parent</cite>
         </div>
-        <div class="img-placeholder"></div>
+        <div class="testimonial" style="margin-top:1.5rem;">
+          <blockquote>"The process was so easy and everyone was incredibly kind. Within six weeks, our son had a bike that actually worked for him. It changed our whole family's weekends."</blockquote>
+          <cite>David & Lin T., parents</cite>
+        </div>
       </div>
     </div>
   </section>
@@ -231,5 +212,20 @@
     </div>
   </footer>
 
+  <script>
+    // Scroll-triggered animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section, .stats-bar, .cta-banner, .card, .testimonial, .press-bar, .tier, .step, .story-card, .impact-item, .event-item, .sponsor-tier').forEach(el => {
+      el.classList.add('animate-on-scroll');
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>

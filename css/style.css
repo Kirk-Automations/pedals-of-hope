@@ -629,43 +629,46 @@ div.img-placeholder {
 }
 
 /* ===== Scroll Animations ===== */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.section, .stats-bar, .cta-banner {
-  animation: fadeInUp 0.6s ease-out;
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* ===== Press Bar ===== */
-.press-bar {
-  background: var(--bg-alt);
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--border);
-}
-.press-grid {
-  max-width: var(--max-width);
-  margin: 0 auto;
+/* Stagger children */
+.card.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.card.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.card.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.impact-item.animate-on-scroll:nth-child(2) { transition-delay: 0.05s; }
+.impact-item.animate-on-scroll:nth-child(3) { transition-delay: 0.1s; }
+.impact-item.animate-on-scroll:nth-child(4) { transition-delay: 0.15s; }
+.impact-item.animate-on-scroll:nth-child(5) { transition-delay: 0.2s; }
+.impact-item.animate-on-scroll:nth-child(6) { transition-delay: 0.25s; }
+
+/* Hero press mentions */
+.hero-press {
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
-}
-.press-item { text-align: center; }
-.press-source {
-  display: block;
-  font-weight: 700;
-  color: var(--text);
+  opacity: 0.6;
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  font-weight: 600;
 }
-.press-quote {
-  font-style: italic;
-  color: var(--text-light);
-  font-size: 0.9rem;
+.hero-press span {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 2px;
 }
+
+
 
 /* ===== Video Placeholder ===== */
 .video-placeholder {
