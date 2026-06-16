@@ -1,17 +1,18 @@
 /* ===== Variables & Reset ===== */
 :root {
-  --primary: #1a56db;           /* Royal Blue */
-  --primary-dark: #1e3a8a;      /* Deep Royal Blue */
-  --primary-light: #dbeafe;     /* Soft Blue */
-  --accent: #4d7c0f;            /* Lime Green */
-  --accent-dark: #3f6212;       /* Dark Lime */
-  --accent-bright: #84cc16;     /* Bright Lime (decorative) */
-  --secondary: #0ea5e9;         /* Sky / Light Blue */
-  --secondary-light: #e0f2fe;   /* Whisper Blue */
+  --primary: #2563EB;           /* Royal Blue */
+  --primary-dark: #1D4ED8;      /* Deep Royal Blue */
+  --primary-light: #DBEAFE;     /* Soft Blue */
+  --accent: #84CC16;            /* Lime Green — bright */
+  --accent-dark: #65A30D;       /* Darker Lime */
+  --accent-text: #1a2e05;       /* Dark text on lime buttons */
+  --secondary: #38BDF8;         /* Light Blue */
+  --secondary-dark: #0EA5E9;    /* Medium Light Blue */
+  --secondary-light: #E0F2FE;   /* Whisper Blue */
   --text: #1e293b;
-  --text-light: #64748b;
+  --text-light: #475569;
   --bg: #ffffff;
-  --bg-alt: #f0f9ff;
+  --bg-alt: #F0F9FF;
   --border: #e2e8f0;
   --radius: 12px;
   --shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
@@ -99,11 +100,11 @@ ul { list-style: none; }
 
 .nav-links .btn-nav {
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-text);
   padding: 0.5rem 1.2rem;
   border-radius: 8px;
   border-bottom: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-links .btn-nav:hover {
@@ -139,7 +140,7 @@ ul { list-style: none; }
 
 /* ===== Hero ===== */
 .hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%);
   color: #fff;
   padding: 6rem 1.5rem 5rem;
   text-align: center;
@@ -192,7 +193,8 @@ ul { list-style: none; }
 
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-text);
+  font-weight: 700;
 }
 
 .btn-primary:hover { background: var(--accent-dark); color: #fff; transform: translateY(-1px); }
@@ -264,7 +266,7 @@ ul { list-style: none; }
 .card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
-  border-color: var(--secondary);
+  border-color: var(--accent);
 }
 
 .card-icon {
@@ -276,7 +278,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f7fee7;
+  background: #F7FEE7;
   border-radius: 10px;
 }
 
@@ -286,7 +288,7 @@ ul { list-style: none; }
 }
 
 .card-icon.sky {
-  color: var(--secondary);
+  color: var(--secondary-dark);
   background: var(--secondary-light);
 }
 
@@ -340,7 +342,7 @@ div.img-placeholder {
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--accent);
+  color: var(--secondary-dark);
 }
 
 .stat-label {
@@ -365,7 +367,7 @@ div.img-placeholder {
   background: var(--bg-alt);
   border-radius: var(--radius);
   padding: 2rem;
-  border-left: 3px solid var(--accent-bright);
+  border-left: 4px solid var(--accent);
 }
 
 .testimonial blockquote {
@@ -398,8 +400,9 @@ div.img-placeholder {
   flex-shrink: 0;
   width: 50px;
   height: 50px;
-  background: var(--primary);
-  color: #fff;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 800;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -445,7 +448,7 @@ div.img-placeholder {
 .form-group select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.12);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .form-group textarea { resize: vertical; min-height: 120px; }
@@ -591,7 +594,8 @@ div.img-placeholder {
   left: 50%;
   transform: translateX(-50%);
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-text);
+  font-weight: 700;
   padding: 0.2rem 1rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -664,7 +668,7 @@ div.img-placeholder {
 
 .location-card:hover {
   box-shadow: var(--shadow-lg);
-  border-color: var(--secondary);
+  border-color: var(--accent);
 }
 
 .location-card h3 {
@@ -841,7 +845,11 @@ div.img-placeholder {
   border-radius: var(--radius);
   font-size: 0.95rem;
 }
-.newsletter-form .btn { padding: 0.6rem 1.5rem; }
+.newsletter-form .btn {
+  padding: 0.6rem 1.5rem;
+  color: var(--accent-text);
+  font-weight: 700;
+}
 
 /* ===== Sponsor Grid ===== */
 .sponsor-grid {
@@ -883,7 +891,7 @@ div.img-placeholder {
 .impact-amount {
   font-size: 1.4rem;
   font-weight: 800;
-  color: var(--primary);
+  color: var(--secondary-dark);
   min-width: 80px;
   text-align: right;
 }
@@ -909,8 +917,8 @@ div.img-placeholder {
   flex-shrink: 0;
   width: 70px;
   text-align: center;
-  background: var(--primary);
-  color: #fff;
+  background: var(--secondary);
+  color: #0c4a6e;
   border-radius: var(--radius);
   padding: 0.8rem 0.5rem;
 }

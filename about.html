@@ -158,51 +158,7 @@
           <h3>Therapy Centers</h3>
           <p>Physical and occupational therapists help us assess needs and ensure proper fitting for every child.</p>
         </div>
-        <div class="card" style="text-align:center;">
-          <div class="card-icon sky" style="margin:0 auto 1rem;"><i class="fa-solid fa-building"></i></div>
-          <h3>Corporate Sponsors</h3>
-          <p>Local and national businesses fund our mission through sponsorships, matching gifts, and events.</p>
-        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Sponsors -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Sponsors</h2>
-        <p>Generous organizations making rides possible</p>
-      </div>
-      <div class="sponsor-grid">
-        <div class="sponsor-tier">
-          <h4>Gold Sponsors</h4>
-          <div class="sponsor-names">
-            <span>Michigan Adaptive Sports</span>
-            <span>Great Lakes Health Foundation</span>
-            <span>Troy Community Foundation</span>
-          </div>
-        </div>
-        <div class="sponsor-tier">
-          <h4>Silver Sponsors</h4>
-          <div class="sponsor-names">
-            <span>Oakland County Parks</span>
-            <span>Beaumont Health</span>
-            <span>Local Bike Shop Co-op</span>
-          </div>
-        </div>
-        <div class="sponsor-tier">
-          <h4>Community Partners</h4>
-          <div class="sponsor-names">
-            <span>Success Physical Therapy</span>
-            <span>Michigan PT Association</span>
-            <span>Rotary Club of Troy</span>
-          </div>
-        </div>
-      </div>
-      <p style="text-align:center; margin-top:2rem; color:var(--text-light);">
-        Interested in sponsoring? <a href="contact.html">Get in touch</a>
-      </p>
     </div>
   </section>
 
@@ -261,7 +217,7 @@
         if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.section, .stats-bar, .cta-banner, .card, .testimonial, .tier, .step, .story-card, .impact-item, .event-item, .sponsor-tier, .team-member, .location-card').forEach(el => {
+    document.querySelectorAll('.section, .stats-bar, .cta-banner, .card, .testimonial, .tier, .step, .team-member, .location-card').forEach(el => {
       el.classList.add('animate-on-scroll'); observer.observe(el);
     });
   </script>
