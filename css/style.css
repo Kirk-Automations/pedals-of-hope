@@ -1172,3 +1172,15 @@ div.img-placeholder {
   padding: 1.25rem 1.5rem;
 }
 .riders-note i { color: var(--lime-dark); margin-right: 0.4rem; }
+
+/* Per-rider sponsor button (added 2026-07-08) */
+.rider-donate-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+.rider-donate-btn i { margin-right: 0.4rem; }
