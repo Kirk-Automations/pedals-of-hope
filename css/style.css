@@ -262,6 +262,22 @@ ul { list-style: none; }
 .hero.center .hero-buttons { justify-content: center; }
 .hero.center .hero-copy .lead { margin-left: auto; margin-right: auto; }
 
+/* Centered hero (homepage) — no illustration, more room for copy */
+.hero.hero-centered { padding: 6rem 1.5rem 5.5rem; text-align: center; }
+.hero.hero-centered .hero-inner {
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 780px;
+}
+.hero.hero-centered .hero-copy { max-width: 720px; margin: 0 auto; }
+.hero.hero-centered .hero-copy .lead { margin-left: auto; margin-right: auto; }
+.hero.hero-centered .hero-buttons { justify-content: center; }
+.hero.hero-centered .hero-copy h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  margin-bottom: 1.25rem;
+}
+.hero.hero-centered .hero-illustration[hidden] { display: none; }
+
 /* ===== Buttons ===== */
 .btn {
   display: inline-flex;
