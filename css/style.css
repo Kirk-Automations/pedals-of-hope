@@ -783,6 +783,12 @@ div.img-placeholder {
   position: relative;
   background: linear-gradient(180deg, var(--lime-tint) 0%, #fff 60%);
 }
+.tier.is-selected {
+  border-color: var(--lime-dark);
+  box-shadow: 0 0 0 4px rgba(132,204,22,0.18), var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
 .tier.featured::before {
   content: 'Most Popular';
   position: absolute;

@@ -43,29 +43,29 @@
         <p>See exactly what your generosity provides</p>
       </div>
       <div class="tier-grid">
-        <div class="tier">
+        <div class="tier" data-amount="50" data-label="$50 - Helmet Hero">
           <h3>Helmet Hero</h3>
           <div class="tier-amount">$50</div>
           <p>Provides an adaptive helmet and safety gear so a child can ride safely from day one.</p>
-          <a href="#donate-form" class="btn btn-primary">Give $50</a>
+          <a href="#donate-form" class="btn btn-primary tier-select">Give $50</a>
         </div>
-        <div class="tier">
+        <div class="tier" data-amount="250" data-label="$250 - Modification Maker">
           <h3>Modification Maker</h3>
           <div class="tier-amount">$250</div>
           <p>Funds custom pedal adaptations, hand grips, or steering modifications for one child's bike.</p>
-          <a href="#donate-form" class="btn btn-primary">Give $250</a>
+          <a href="#donate-form" class="btn btn-primary tier-select">Give $250</a>
         </div>
-        <div class="tier featured">
+        <div class="tier featured" data-amount="1000" data-label="$1,000 - Bike Builder">
           <h3>Bike Builder</h3>
           <div class="tier-amount">$1,000</div>
           <p>Covers a significant portion of an adaptive trike, enough to make a bike possible for a family in need.</p>
-          <a href="#donate-form" class="btn btn-primary">Give $1,000</a>
+          <a href="#donate-form" class="btn btn-primary tier-select">Give $1,000</a>
         </div>
-        <div class="tier">
+        <div class="tier" data-amount="3500" data-label="$3,500 - Freedom Funder">
           <h3>Freedom Funder</h3>
           <div class="tier-amount">$3,500</div>
           <p>Fully funds one complete adaptive bike package including equipment, fitting, helmet, and follow-up care.</p>
-          <a href="#donate-form" class="btn btn-primary">Give $3,500</a>
+          <a href="#donate-form" class="btn btn-primary tier-select">Give $3,500</a>
         </div>
       </div>
     </div>
@@ -225,6 +225,34 @@
           if (ded && !ded.value) ded.value = 'Sponsoring ' + safe;
         }
       }
+    })();
+
+    // Prefill donation amount when a tier card is selected
+    (function(){
+      const dropdown = document.querySelector('select[name="donation_amount"]');
+      const customInput = document.querySelector('input[name="custom_amount"]');
+      document.querySelectorAll('.tier-select').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tier = btn.closest('.tier');
+          const label = tier && tier.dataset.label;
+          const amount = tier && tier.dataset.amount;
+          if (dropdown && label) {
+            const match = Array.from(dropdown.options).find(o => o.value === label || o.text === label);
+            if (match) {
+              dropdown.value = match.value;
+            } else {
+              dropdown.value = 'Other Amount';
+              if (customInput && amount) customInput.value = amount;
+            }
+          }
+          if (customInput && amount && dropdown && dropdown.value === 'Other Amount') {
+            customInput.value = amount;
+          }
+          // Visual highlight the selected tier
+          document.querySelectorAll('.tier').forEach(t => t.classList.remove('is-selected'));
+          if (tier) tier.classList.add('is-selected');
+        });
+      });
     })();
 
     (function(){
