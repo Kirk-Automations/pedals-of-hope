@@ -7,7 +7,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚲</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -29,7 +29,8 @@
     </nav>
   </header>
 
-  <section class="page-header">
+  <section class="page-header ph-contact">
+    <div class="eyebrow">Say Hello</div>
     <h1>Contact Us</h1>
     <p>Questions, partnerships, or just want to say hello, we'd love to hear from you</p>
   </section>
@@ -70,15 +71,6 @@
           <div style="margin-bottom:1.5rem;">
             <h3 style="font-size:1rem; margin-bottom:0.3rem;"><i class="fa-solid fa-envelope"></i> Email</h3>
             <p><a href="mailto:mandykirkdpt@gmail.com">mandykirkdpt@gmail.com</a></p>
-          </div>
-
-          <div style="margin-bottom:1.5rem;">
-            <h3 style="font-size:1rem; margin-bottom:0.3rem;"><i class="fa-solid fa-share-nodes"></i> Social Media</h3>
-            <p>
-              <a href="#" style="margin-right:1rem;">Facebook</a>
-              <a href="#" style="margin-right:1rem;">Instagram</a>
-              <a href="#">Twitter</a>
-            </p>
           </div>
 
           <div style="background:var(--primary-light); padding:1.2rem; border-radius:var(--radius); margin-top:1rem;">
@@ -215,24 +207,34 @@
       <div>
         <h4>Connect</h4>
         <a href="contact.html">Contact Us</a>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
+        <a href="mailto:mandykirkdpt@gmail.com">mandykirkdpt@gmail.com</a>
       </div>
     </div>
 <div class="footer-bottom">
-      &copy; 2026 Pedals of Hope. All rights reserved. EIN: 00-0000000
+      &copy; 2026 Pedals of Hope. All rights reserved. &middot; EIN pending
     </div>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    (function(){
+      const targets = document.querySelectorAll('.section, .stats-bar, .cta-banner, .card, .testimonial, .tier, .step, .team-member, .location-card, .trust-strip');
+      if (!('IntersectionObserver' in window)) {
+        targets.forEach(el => el.classList.add('animate-on-scroll', 'visible'));
+        return;
+      }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+      targets.forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.section, .cta-banner, .card, .location-card').forEach(el => {
-      el.classList.add('animate-on-scroll'); observer.observe(el);
-    });
+      setTimeout(() => {
+        document.querySelectorAll('.animate-on-scroll:not(.visible)').forEach(el => el.classList.add('visible'));
+      }, 2000);
+    })();
   </script>
 </body>
 </html>

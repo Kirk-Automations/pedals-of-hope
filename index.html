@@ -7,7 +7,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚲</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -32,94 +32,173 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1>Every Child Deserves to Ride</h1>
-    <p>We connect children with disabilities to the specialized adaptive bikes and equipment they need to ride alongside their peers.</p>
-    <div class="hero-buttons">
-      <a href="intake.html" class="btn btn-primary">Apply for a Bike</a>
-      <a href="donate.html" class="btn btn-outline">Make a Donation</a>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow"><i class="fa-solid fa-heart"></i> Michigan-based · 501(c)(3) non-profit</div>
+        <h1>Every child deserves <span class="accent">to ride.</span></h1>
+        <p class="lead">We connect children with disabilities to the specialized adaptive bikes and equipment they need to ride alongside their peers &mdash; regardless of what a family can afford.</p>
+        <div class="hero-buttons">
+          <a href="intake.html" class="btn btn-primary"><i class="fa-solid fa-child-reaching"></i> Apply for a Bike</a>
+          <a href="donate.html" class="btn btn-outline">Make a Donation</a>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <!-- Playful SVG scene: child on adaptive trike, hand-drawn feel -->
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a child riding an adaptive trike">
+          <!-- soft ground -->
+          <ellipse cx="250" cy="430" rx="180" ry="16" fill="#84CC16" opacity="0.15"/>
+          <!-- sun -->
+          <circle cx="410" cy="90" r="42" fill="#FCD34D" opacity="0.85"/>
+          <circle cx="410" cy="90" r="55" fill="#FCD34D" opacity="0.25"/>
+          <!-- cloud -->
+          <g fill="#fff" opacity="0.85">
+            <ellipse cx="90" cy="110" rx="34" ry="18"/>
+            <ellipse cx="115" cy="100" rx="28" ry="18"/>
+            <ellipse cx="140" cy="115" rx="30" ry="16"/>
+          </g>
+          <!-- trike frame -->
+          <g stroke="#1e3a8a" stroke-width="9" stroke-linecap="round" fill="none">
+            <!-- rear axle -->
+            <line x1="150" y1="360" x2="290" y2="360"/>
+            <!-- seat post -->
+            <line x1="220" y1="360" x2="220" y2="260"/>
+            <!-- top tube to front -->
+            <line x1="220" y1="260" x2="330" y2="230"/>
+            <!-- front fork -->
+            <line x1="330" y1="230" x2="360" y2="360"/>
+          </g>
+          <!-- rear wheels -->
+          <g class="wheel">
+            <circle cx="150" cy="360" r="52" fill="#fff" stroke="#1e293b" stroke-width="8"/>
+            <circle cx="150" cy="360" r="8" fill="#1e293b"/>
+            <g stroke="#94a3b8" stroke-width="3">
+              <line x1="150" y1="315" x2="150" y2="405"/>
+              <line x1="105" y1="360" x2="195" y2="360"/>
+              <line x1="118" y1="328" x2="182" y2="392"/>
+              <line x1="118" y1="392" x2="182" y2="328"/>
+            </g>
+          </g>
+          <g class="wheel">
+            <circle cx="290" cy="360" r="52" fill="#fff" stroke="#1e293b" stroke-width="8"/>
+            <circle cx="290" cy="360" r="8" fill="#1e293b"/>
+            <g stroke="#94a3b8" stroke-width="3">
+              <line x1="290" y1="315" x2="290" y2="405"/>
+              <line x1="245" y1="360" x2="335" y2="360"/>
+              <line x1="258" y1="328" x2="322" y2="392"/>
+              <line x1="258" y1="392" x2="322" y2="328"/>
+            </g>
+          </g>
+          <!-- front wheel -->
+          <g class="wheel">
+            <circle cx="360" cy="360" r="52" fill="#fff" stroke="#1e293b" stroke-width="8"/>
+            <circle cx="360" cy="360" r="8" fill="#1e293b"/>
+            <g stroke="#94a3b8" stroke-width="3">
+              <line x1="360" y1="315" x2="360" y2="405"/>
+              <line x1="315" y1="360" x2="405" y2="360"/>
+              <line x1="328" y1="328" x2="392" y2="392"/>
+              <line x1="328" y1="392" x2="392" y2="328"/>
+            </g>
+          </g>
+          <!-- seat -->
+          <rect x="200" y="245" width="42" height="16" rx="6" fill="#38BDF8"/>
+          <!-- handlebar -->
+          <line x1="330" y1="230" x2="325" y2="195" stroke="#1e3a8a" stroke-width="9" stroke-linecap="round"/>
+          <line x1="310" y1="200" x2="345" y2="200" stroke="#1e3a8a" stroke-width="9" stroke-linecap="round"/>
+          <!-- streamers -->
+          <g stroke="#84CC16" stroke-width="4" stroke-linecap="round" fill="none">
+            <path d="M 345 200 Q 375 205 385 220"/>
+            <path d="M 345 208 Q 380 215 395 232"/>
+          </g>
+          <g stroke="#38BDF8" stroke-width="4" stroke-linecap="round" fill="none">
+            <path d="M 310 200 Q 285 205 275 220"/>
+            <path d="M 310 208 Q 280 215 265 232"/>
+          </g>
+          <!-- child body -->
+          <!-- torso: bright shirt -->
+          <path d="M 200 210 Q 220 195 250 205 L 258 265 Q 240 275 215 268 Z" fill="#2563EB"/>
+          <!-- arms reaching to bars -->
+          <path d="M 250 215 Q 280 205 320 205" stroke="#f5d0a9" stroke-width="14" stroke-linecap="round" fill="none"/>
+          <path d="M 250 215 Q 250 190 240 185" stroke="#f5d0a9" stroke-width="14" stroke-linecap="round" fill="none"/>
+          <!-- head -->
+          <circle cx="215" cy="175" r="30" fill="#f5d0a9"/>
+          <!-- helmet -->
+          <path d="M 185 168 Q 190 138 218 138 Q 245 138 248 168 L 246 172 L 187 172 Z" fill="#84CC16"/>
+          <line x1="205" y1="152" x2="235" y2="152" stroke="#65A30D" stroke-width="3"/>
+          <!-- helmet strap -->
+          <path d="M 190 172 Q 200 195 215 197" stroke="#65A30D" stroke-width="3" fill="none"/>
+          <!-- smile -->
+          <path d="M 205 185 Q 215 195 225 185" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <!-- eyes -->
+          <circle cx="207" cy="175" r="2.5" fill="#1e293b"/>
+          <circle cx="223" cy="175" r="2.5" fill="#1e293b"/>
+          <!-- legs -->
+          <path d="M 225 265 Q 210 300 200 335" stroke="#0EA5E9" stroke-width="16" stroke-linecap="round" fill="none"/>
+          <path d="M 245 265 Q 260 295 260 330" stroke="#0EA5E9" stroke-width="16" stroke-linecap="round" fill="none"/>
+          <!-- shoes -->
+          <ellipse cx="197" cy="342" rx="15" ry="8" fill="#1e293b"/>
+          <ellipse cx="262" cy="336" rx="15" ry="8" fill="#1e293b"/>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- Mission Summary -->
-  <section class="section">
+  <!-- Mission -->
+  <section class="section section-cream">
     <div class="container">
-      <div style="max-width:700px; margin:0 auto; text-align:center;">
-        <h2 style="font-size:1.8rem; color:var(--primary-dark); margin-bottom:1rem;">Adaptive Cycling for Every Ability</h2>
-        <p style="margin-bottom:1rem;">Children with genetic conditions, muscular conditions, and other disabilities deserve the freedom of riding. Conditions like muscular dystrophy, cerebral palsy, spinal muscular atrophy, and spina bifida can make standard bikes impossible, but adaptive equipment changes that.</p>
-        <p style="margin-bottom:1rem;"><strong>Adaptive tricycles</strong> provide full trunk and lateral support for children who need extra stability, while <strong>hand cycles</strong> offer upper-body powered riding for children with limited or no leg function.</p>
-        <p><strong>Pedals of Hope</strong> connects families with the right adaptive equipment so no child is left watching from the sidewalk.</p>
+      <div style="max-width:720px; margin:0 auto; text-align:center;">
+        <div class="eyebrow" style="display:inline-block; font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--royal); margin-bottom:0.6rem;">Our Mission</div>
+        <h2 style="font-size:clamp(1.7rem, 3vw, 2.2rem); color:var(--royal-deep); margin-bottom:1.25rem;">Adaptive cycling for every ability</h2>
+        <p style="margin-bottom:1rem; font-size:1.05rem; color:var(--text-light);">Muscular dystrophy, cerebral palsy, spinal muscular atrophy, spina bifida &mdash; conditions that make a standard bike impossible don&rsquo;t have to mean sitting out.</p>
+        <p style="font-size:1.05rem; color:var(--text-light);"><strong style="color:var(--text);">Adaptive tricycles</strong> give full trunk and lateral support to riders who need extra stability. <strong style="color:var(--text);">Hand cycles</strong> put the freedom of riding in the hands of children with limited or no leg function. Pedals of Hope connects families with the right equipment so no child is left watching from the sidewalk.</p>
       </div>
     </div>
   </section>
 
   <!-- How It Works -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="section-header">
-        <h2>How It Works</h2>
-        <p>Three simple steps to get your child riding</p>
+        <div class="eyebrow">How It Works</div>
+        <h2>Three steps to a first ride</h2>
+        <p>We keep the process personal &mdash; every application is reviewed by real people.</p>
       </div>
       <div class="card-grid">
         <div class="card">
           <div class="card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
           <h3>1. Apply Online</h3>
-          <p>Fill out our <a href="intake.html">online intake form</a> with your child's needs and information. We review every application personally.</p>
+          <p>Fill out our <a href="intake.html">intake form</a> with your child&rsquo;s needs, therapist recommendations, and any medical documentation.</p>
         </div>
         <div class="card">
           <div class="card-icon blue"><i class="fa-solid fa-wrench"></i></div>
           <h3>2. Get Matched</h3>
-          <p>Our team works with certified adaptive equipment specialists to find the perfect bike or trike for your child's specific abilities and goals.</p>
+          <p>We work with certified adaptive equipment specialists to find the right trike, hand cycle, or add-on for your child&rsquo;s abilities and goals.</p>
         </div>
         <div class="card">
           <div class="card-icon sky"><i class="fa-solid fa-bicycle"></i></div>
           <h3>3. Ride!</h3>
-          <p>Your child receives their custom-fitted adaptive bike, fully funded or with significant financial assistance. Then the real fun begins.</p>
+          <p>Your child receives a custom-fitted adaptive bike, fully funded or on a sliding scale &mdash; then the real fun begins.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Impact Numbers -->
-  <section class="stats-bar">
-    <div class="stats-grid">
-      <div>
-        <div class="stat-number">150+</div>
-        <div class="stat-label">Bikes Funded</div>
-      </div>
-      <div>
-        <div class="stat-number">38</div>
-        <div class="stat-label">States Reached</div>
-      </div>
-      <div>
-        <div class="stat-number">100%</div>
-        <div class="stat-label">of Families Served on Sliding Scale</div>
-      </div>
-      <div>
-        <div class="stat-number">$0</div>
-        <div class="stat-label">Cost to Qualifying Families</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonial -->
-  <section class="section">
-    <div class="container">
-      <div style="max-width:650px; margin:0 auto;">
-        <div class="testimonial">
-          <blockquote>"When Lily got her adaptive trike, she rode right up to the other kids at the park for the first time. She was laughing so hard she could barely steer. That moment changed everything for our family."</blockquote>
-          <cite>- Parent of a Pedals of Hope recipient</cite>
-        </div>
-      </div>
+  <!-- Trust strip -->
+  <section class="trust-strip">
+    <div class="trust-strip-inner">
+      <span><i class="fa-solid fa-shield-halved"></i> 501(c)(3) non-profit</span>
+      <span><i class="fa-solid fa-hand-holding-heart"></i> 100% sliding-scale</span>
+      <span><i class="fa-solid fa-user-doctor"></i> DPT-led team</span>
+      <span><i class="fa-solid fa-location-dot"></i> Based in Michigan</span>
     </div>
   </section>
 
   <!-- CTA Banner -->
   <section class="cta-banner cta-green">
-    <h2>Help a Child Experience the Joy of Riding</h2>
-    <p>Your donation directly funds adaptive bikes for children who need them most.</p>
+    <h2>Help a child feel the wind in their face.</h2>
+    <p>Every donation funds real equipment for a real kid &mdash; no overhead, no gimmicks.</p>
     <div class="hero-buttons">
-      <a href="donate.html" class="btn btn-primary">Donate Now</a>
-      <a href="intake.html" class="btn btn-outline">Apply for a Bike</a>
+      <a href="donate.html" class="btn btn-primary"><i class="fa-solid fa-heart"></i> Donate Now</a>
+      <a href="stories.html" class="btn btn-outline">See Our Riders</a>
     </div>
   </section>
 
@@ -127,7 +206,7 @@
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-about">
-        <h4><i class="fa-solid fa-bicycle"></i> Pedals of Hope</h4>
+        <div class="footer-logo"><span class="badge"><i class="fa-solid fa-bicycle"></i></span> Pedals of Hope</div>
         <p>A 501(c)(3) non-profit dedicated to providing adaptive bikes and cycling equipment to children with disabilities, so every child can experience the freedom of riding.</p>
       </div>
       <div>
@@ -146,24 +225,36 @@
       <div>
         <h4>Connect</h4>
         <a href="contact.html">Contact Us</a>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
+        <a href="mailto:mandykirkdpt@gmail.com">mandykirkdpt@gmail.com</a>
       </div>
     </div>
-<div class="footer-bottom">
-      &copy; 2026 Pedals of Hope. All rights reserved. EIN: 00-0000000
+    <div class="footer-bottom">
+      &copy; 2026 Pedals of Hope. All rights reserved. &middot; EIN pending
     </div>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    (function(){
+      const targets = document.querySelectorAll('.section, .stats-bar, .cta-banner, .card, .testimonial, .trust-strip');
+      // If IntersectionObserver isn't available, show everything.
+      if (!('IntersectionObserver' in window)) {
+        targets.forEach(el => el.classList.add('animate-on-scroll', 'visible'));
+        return;
+      }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+      targets.forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.section, .stats-bar, .cta-banner, .card, .testimonial').forEach(el => {
-      el.classList.add('animate-on-scroll'); observer.observe(el);
-    });
+      // Safety net: after 2s, reveal any remaining stuck elements.
+      setTimeout(() => {
+        document.querySelectorAll('.animate-on-scroll:not(.visible)').forEach(el => el.classList.add('visible'));
+      }, 2000);
+    })();
   </script>
 </body>
 </html>
