@@ -19,7 +19,7 @@ index.html       Home
 about.html       Who we are + staff
 programs.html    What we fund
 stories.html     Rider stories (per-rider sponsor buttons)
-donate.html      Donation form (FormSubmit -> mandykirkdpt@gmail.com)
+donate.html      Donation form (FormSubmit -> pedalsofhopeorg@gmail.com)
 intake.html      Application form
 contact.html     Contact / volunteer / partner form
 thanks.html      Form-submit thank-you page
@@ -54,5 +54,5 @@ live URL returns 200.
 ## Forms
 
 Currently all forms submit to **FormSubmit** targeting
-`mandykirkdpt@gmail.com`. This is a placeholder — swap for a real
+`pedalsofhopeorg@gmail.com`. This is a placeholder — swap for a real
 payment processor (Stripe / Donorbox / Zeffy / etc.) when ready.
