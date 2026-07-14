@@ -5,7 +5,7 @@ connects children with disabilities to adaptive bikes.
 
 ## Live site
 
-**https://kirkautomations.com/pedals-of-hope/**
+**https://pedalsofhope.com/**
 
 Hosted on the Kirk Automations Hetzner box via Caddy static file serving.
 (Future move: dedicated domain like `pedalsofhope.org`.)

@@ -16,7 +16,7 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
 REMOTE_HOST="kirk-auto"
 REMOTE_PATH="/var/www/kirkautomations/pedals-of-hope"
-LIVE_URL="https://kirkautomations.com/pedals-of-hope/"
+LIVE_URL="https://pedalsofhope.com/"
 TMP_TAR="/tmp/pedals-of-hope-$$.tar.gz"
 
 echo "==> Packaging site from $REPO_ROOT"
